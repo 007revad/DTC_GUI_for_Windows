@@ -1,6 +1,7 @@
 <h1><img src="images/tree.png" alt="" style="width: 64px; height: 64px;" /> DTC GUI for Windows</h1>
 
 <a href="https://github.com/007revad/DTC_GUI_for_Windows/releases"><img src="https://img.shields.io/github/release/007revad/DTC_GUI_for_Windows.svg"></a>
+[![Github Releases](https://img.shields.io/github/downloads/007revad/DTC_GUI_for_Windows/total.svg)](https://github.com/007revad/DTC_GUI_for_Windows/releases)
 <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F007revad%2FDTC_GUI_for_Windows&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false"/></a>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/paypalme/007revad)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/007revad)
