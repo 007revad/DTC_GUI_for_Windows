@@ -36,8 +36,4 @@ Edit the included **DTC-GUI.ini** file to set `dtc_path=` to the location of dtc
 
 <p align="center">Any errors are shown in a popup dialog</p>
 <p align="center"><img src="/images/error1.png"></p>
-<p align="center"><img src="/images/error2.png"></p>
-
-<br>
-
 
