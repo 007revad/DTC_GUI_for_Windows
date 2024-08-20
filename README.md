@@ -14,7 +14,7 @@ DTC-GUI.exe was written in an old scripting language called Visual DialogScript 
 
 ### Requirements
 
-DTC-GUI.exe reuires dtc and libyaml from https://www.msys2.org/
+DTC-GUI.exe requires dtc and libyaml from https://www.msys2.org/
 
 All required files and their licenses are included in the [DTC-GUI_for_Windows zip file](https://github.com/007revad/DTC_GUI_for_Windows/releases)
 
