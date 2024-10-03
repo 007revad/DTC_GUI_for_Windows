@@ -1,0 +1,7 @@
+v1.0.5
+- Added support for dropping a dtb or dts file onto the DTC-GUI window.
+- Added support to right-click a dtb or dtc file and select "open with" or "send to".
+  - To use Windows "send to" create a shortcut to DTC-GUI-exe in C:\users\[username]\AppData\Roaming\Microsoft\Windows\SendTo
+
+v1.0.4
+- First release.
