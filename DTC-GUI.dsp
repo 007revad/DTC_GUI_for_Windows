@@ -3,24 +3,22 @@ Project Type=61
 InfoVersion=1
 CompanyName=007revad
 FileDescription=
-FileVersion=1.0.0.4
-LegalCopyright=Copyright Â© 2024
+FileVersion=1.0.0.5
+LegalCopyright=Copyright © 2024
 OriginalFilename=DTC-GUI.exe
 ProductName=DTC GUI
-ProductVersion=1.0.0.4
+ProductVersion=1.0.5.0
 AutoVerInc=1
 Include Manifest=1
 Execution Level=0
 Create Map=0
 IconFile=#tree.ico
 [Project]
-Other File 1=
-tl_Other File 1=248
-DS Version=6.0
 Main File=#DTC-GUI.dsc
-tl_Main File=32
-Other File 2=
-[BM_Directory Size modified]
+tl_Main File=3
+DS Version=6.0
+Other File 1=
+[BM_DTC-GUI]
 BM0=
 BM1=
 BM2=
@@ -31,29 +29,7 @@ BM6=
 BM7=
 BM8=
 BM9=
-[BP_Directory Size modified]
-BP0=
-BP1=
-BP2=
-BP3=
-BP4=
-BP5=
-BP6=
-BP7=
-BP8=
-BP9=
-[BM_DTC GUI]
-BM0=91
-BM1=92
-BM2=
-BM3=
-BM4=
-BM5=
-BM6=
-BM7=
-BM8=
-BM9=
-[BP_DTC GUI]
+[BP_DTC-GUI]
 BP0=
 BP1=
 BP2=

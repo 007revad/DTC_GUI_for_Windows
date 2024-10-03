@@ -15,9 +15,10 @@
     goto Close
   end
 
+
 REM  DIALOG CREATE,DTC GUI,-1,0,560,156
-  DIALOG CREATE,DTC GUI,-1,0,560,156,ONTOP
-REM *** Modified by Dialog Designer on Tue 20 08 2024 - 12:30 ***
+  DIALOG CREATE,DTC GUI,-1,0,560,156,ONTOP,DRAGDROP
+REM *** Modified by Dialog Designer on Thu 3 10 2024 - 13:14 ***
   DIALOG ADD,STYLE,STYLE1,,,B,,RED
   DIALOG ADD,STYLE,STYLE2,,,BC,,00C400
   DIALOG ADD,STYLE,STYLE3,,,BC,,RED
@@ -34,8 +35,12 @@ REM *** Modified by Dialog Designer on Tue 20 08 2024 - 12:30 ***
   dialog disable, Compile
   dialog disable, Decompile
   dialog hide, TEXT5
+  DIALOG HIDE
+  if @not(@null(%1))
+    %%file_in = %1
+    gosub VerifyFile
+  end
   DIALOG SHOW
-
 
 :EvLoop
   wait event, 0.5
@@ -69,27 +74,43 @@ REM *** Modified by Dialog Designer on Tue 20 08 2024 - 12:30 ***
   inifile close, %%inifile
   stop
 
+:VerifyFile
+  %%ext_in = @ext(%%file_in)
+  %%name = @name(%%file_in)
+  %%path = @path(%%file_in) 
+
+  if @equal(%%ext_in,dtb)
+    %%ext_out = dts
+  elsif @equal(%%ext_in,dts)
+    %%ext_out = dtb
+  else
+    warn "Not a dtb or dts file!"
+    exit
+  end
+
+  %%file_out = %%path%%name.%%ext_out
+
+  dialog set, EDIT1, %%file_in
+  dialog set, EDIT2, %%file_out
+
+  dialog set, TEXT4,
+  dialog hide, TEXT5
+  exit
+
+:DRAGDROP
+  list create,1
+  list dropfiles,1
+  %%file_in = @item(1) 
+  if @ok()
+    gosub VerifyFile
+  end
+  list close,1
+  goto Timer
 
 :SelectBUTTON
   %%file_in = @filedlg("dtc files (*.dts,*dtb)|*.dt?",Open file) 
   if @ok()
-    %%ext_in = @ext(%%file_in)
-    %%name = @name(%%file_in)
-    %%path = @path(%%file_in) 
-
-    if @equal(%%ext_in,dtb)
-      %%ext_out = dts
-    elsif @equal(%%ext_in,dts)
-      %%ext_out = dtb
-    end
-
-    %%file_out = %%path%%name.%%ext_out
-
-    dialog set, EDIT1, %%file_in
-    dialog set, EDIT2, %%file_out
-
-    dialog set, TEXT4,
-    dialog hide, TEXT5
+    gosub VerifyFile
   end
   goto Timer
 
